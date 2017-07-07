@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="lock-wrapper" onload="startTime()" login-view>
+
+        <div class="login_title">Turismo Alojamiento</div>
+        <div ng-show="error" class="alert alert-block alert-danger fade in">
+            <button data-dismiss="alert" class="close close-sm" type="button">
+                <i class="fa fa-times"></i>
+            </button>
+            {{error}}
+        </div>
+        <div class="panel-body">
+            <div class="login-center form">
+
+                <form role="form" data-ng-submit="authenticate();">
+                    <div class="form-group" data-ng-class="{'has-error': errorValidate(inputEmail) }">
+                        <label for="inputEmail">Correo Electronico (Usuario)</label><span class="red-asterik">*</span>
+                        <input autofocus="autofocus" type="text" class="form-control" id="inputEmail" placeholder="Correo Electronico" name="inputEmail"
+                               data-ng-model="user" required>
+                        <div class="error-field-validation" data-ng-show="errorValidate(inputEmail)">
+                            Correo Electronico es requerido.
+                        </div>
+                    </div>
+                    <div class="form-group" data-ng-class="{'has-error': errorValidate(inputPassword) }">
+                        <label for="inputPassword">Contrase&#241;a</label><span class="red-asterik">*</span>
+                        <input autofocus="autofocus" type="password" class="form-control" id="inputPassword" placeholder="Contrase&#241;a" name="inputPassword"
+                               data-ng-model="password" required>
+                        <div class="error-field-validation" data-ng-show="errorValidate(inputPassword)">
+                            Contrase&#241;a es requerida.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="error-field-validation" data-ng-show="alert">{{alert.msg}}</span>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <button class="btn" type="button" ng-click="authenticate();">
+                            <span>Login</span>
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                        <button class="btn" style="float:right;" type="button" ng-click="back();">
+                            <span>Volver</span>
+                        </button>
+                        <button class="btn" style="float:right; margin-right:5px;" type="button" ng-click="register();">
+                            <span>Crear Usuario</span>
+                        </button>
+                        
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <div class="form-group" data-ng-show="invalid_grant">
+                        <span style="color:red">Usuario o Password incorrecto.</span>
+                    </div>
+                    <div class="form-group" data-ng-show="not_activated">
+                        <span style="color:red">La cuenta no fue activada. Verifique su cuenta de correo y haga click en activar cuenta.</span>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

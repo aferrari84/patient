@@ -1,0 +1,39 @@
+<div id="formContent" class="panel panel-default">
+    <div class="panel-heading">
+        {{name}} - {{location}}
+    </div>
+
+    <div class="panel-body">
+        <div class="row">
+
+            <div class="col-lg-8">
+                <label>Tipo Alojamiento: </label> <span>{{type}}</span><br />
+                <label>Cantidad Personas: </label> <span>{{capacity}}</span><br />
+                <label>Telefono: </label> <span>{{phone}}</span><br/>
+                <label>Email: </label> <span>{{email}}</span><br />
+                <label>Web Page: </label> <span>{{webpage}}</span><br />
+                <br />
+                <label>Mas Informacion: </label>
+                <div load-html html-to-bind="htmlToBind" ng-if="dataHasLoaded"></div>
+                <br />
+                <label>Fotos: </label>
+                <ng-gallery images="images" thumbs-num="5"></ng-gallery>
+            </div>
+
+            <div class="col-lg-4">
+
+                <div style="height:25px">
+                    DESTACADOS
+                </div>
+                <div data-ng-repeat="ad in ads" style="display: inline;">
+                    <a  data-ng-class="{true:'active', false:''}[state_name == 'ads']" href="/{{ad.link}}" data-ng-show="!ad.external" style="padding: 0;">
+                        <img src="{{ad.img}}" />
+                    </a>
+                    <a data-ng-class="{true:'active', false:''}" href="http://{{ad.link}}" target="_blank" data-ng-show="ad.external" style="padding: 0;">
+                        <img src="{{ad.img}}" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

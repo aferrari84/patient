@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="AccommodationApp" data-ng-controller="AppCtrl">
+<head>
+    <meta charset="utf-8" />
+    <base href="/" />
+    <title data-ng-bind="pageTitle"></title>
+    <meta name="description" content="Encuentre alojamiento, cabañas, hoteles, departamentos en las distintas localidades turísticas de Argentina, turismo en Argentina y Servicios disponibles.">
+    <meta name="keywords" content="alojamiento,residencia,cabaña,casa,departamento,turismo,hotel,Villa Carlos Paz,Villa General Belgrano,Capilla del Monte,Córdoba,La Cubre,La Falda,Mina Clavero,Santa Rosa de Calamuchita,Cosquín,Alta Gracia,Nono,Cariló,Mar del Plata,Miramar,Necochea,Partido de la Costa,Pinamar,Sierra de la Ventana,Tandil,Villa Gesell,Buenos Aires Ciudad,S. F. DEL V. DE CATAMARCA,Resistencia,Esquel,Puerto Madryn,Corrientes,Colón,Gualeguaychú,Paraná,Formosa,Humahuaca,La Quiaca,Purmamarca,Tilcara,Santa Rosa,La Rioja,Las Leñas,Mendoza,San Rafael,Puerto Iguazú,Copahue,San Martín de los Andes,Villa la Angostuna', 'villalaangostuna,El Bolsón,Las Grutas,San Carlos de Bariloche,Cachi,Cafayate,Salta,San Juan,Merlo,San Luis,El Calafate,El Chaltén,Rosario,Termas de Río Hondo,Ushuaia,San Miguel de Tucumán,Tafí del Valle">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!-- font awesome from BootstrapCDN -->
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>"/>
+    <% }); %>
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script>
+    <% }); %>
+</head>
+<body>
+<section id="container" ui-view="container" autoscroll="false">
+</section>
+<div id="spinner" loading-spinner class="loading ng-hide">Loading&#8230;</div>
+</body>
+</html>
