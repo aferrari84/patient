@@ -1,7 +1,7 @@
-Octopus
+Patients
 ==========
 
-Octopus is a web application to manage operations inside Santex Company
+Patients is a web application to manage patients
 
 This use the following technologies
 
@@ -28,9 +28,9 @@ Install NodeJS (http://nodejs.org/)
 - grunt [build, karma, compile] = build the front end, run the unittest, compile the front end.
 
 ```sh
-git clone git@git.santexgroup.com:net/octopus.git octopus
-cd octopus
-cd Octopus.FrontEnd
+git clone git@github.com:aferrari84/patient.git Patients
+cd Patients
+cd Patients.FrontEnd
 npm -g install grunt-cli karma bower
 npm install
 bower install
