@@ -1,62 +1,27 @@
-Patients
-==========
+# Angular5App
 
-Patients is a web application to manage patients
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
-This use the following technologies
+## Development server
 
-  - ASP.NET WEB API 2
-  - AngularJS for the Front End
-  - SQL Server 2008
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Code scaffolding
 
-Version
-----
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-1.0
+## Build
 
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-Installation
---------------
+## Running unit tests
 
-##### Front End Compilation
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Install NodeJS (http://nodejs.org/)
+## Running end-to-end tests
 
-- nmp install = Install all the packages needed for Grunt, karma, etc.
-- bower install = Install all the javascript dependencies, e.g. Angular, jQuery, etc.
-- grunt [build, karma, compile] = build the front end, run the unittest, compile the front end.
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-```sh
-git clone git@github.com:aferrari84/patient.git Patients
-cd Patients
-cd Patients.FrontEnd
-npm -g install grunt-cli karma bower
-npm install
-bower install
-grunt build
-```
+## Further help
 
-##### BackEnd API Compilation
-
-All the projects must have the version 4.5.1 of the .Net Framework
-
-Run the folling from the Package Manager Console
-
-Running the WebApi project will create the database and will run all the fixtures scripts, please be sure the change the web.config according your connection string.
-
-
-Good Practices
-----------------
-
-
-* Add Summary documentation to the methods and classes.
-* Add the corresponding unittests
-
-Done Criteria
--------------
-- Two +1 from other devs in the Code Review.
-- Jenkins Build / Deployment
-- Precence of UnitTest in both sides BackEnd and FrontEnd.
-- +1 from QA
-- Description and testing suggestions in the Code Review description.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
