@@ -1,0 +1,19 @@
+<h2>My Users</h2>
+
+<mat-form-field>
+  <input matInput placeholder="Input" value="user">
+</mat-form-field>
+
+
+<div *ngIf="userStatus" class="name">{{user.name}}</div>
+
+<ul>
+  <li *ngFor="let user of users">{{user.name}}</li>
+</ul>
+
+<!-- <div [ngSwitch]="user?.name">
+    <app-happy-user    *ngSwitchCase="'Pablo'"    [user]="user"></app-happy-user>
+    <app-sad-user      *ngSwitchCase="'Diego'"      [user]="user"></app-sad-user>
+    <app-confused-user *ngSwitchCase="'app-confused'" [user]="user"></app-confused-user>
+    <app-unknown-user  *ngSwitchDefault           [user]="user"></app-unknown-user>
+  </div> -->
